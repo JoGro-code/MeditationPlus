@@ -1,0 +1,275 @@
+/* style.css */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  /* Anpassungen für kleinere Bildschirme */
+}
+
+/* Farbschema */
+:root {
+  --primary-color: #fffffe; /* #daa387 Beispiel für eine Primärfarbe */
+  --secondary-color: #f4f4f8; /* Beispiel für eine Sekundärfarbe */
+  --text-color: #326e87; /* #326e87 333333 Dunkle Textfarbe */
+  --bg-color: #f7f0de; /* Hintergrundfarbe */
+}
+
+header {
+  transition: top 0.3s;
+  position: fixed; /* Behält den Header an der Spitze des Bildschirms */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stellt sicher, dass der Header die volle Breite einnimmt */
+  background: rgba(0, 0, 0, 0.5); /* Transparenter Hintergrund */
+  height: 15vh;
+  z-index: 10; /* Stellt sicher, dass der Header über anderen Elementen liegt */
+}
+
+header h1 {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  color: var(--primary-color);
+  left: -150%;
+  top: -45%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 2%;
+  display: flex;
+  justify-content: right;
+  padding-right: 10%;
+}
+
+nav li {
+  padding: 30px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+#hero {
+  margin-top: 0; /* Kein Margin oben */
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* oder die gewünschte Höhe */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; /* Alles außerhalb des Containers ausblenden */
+  display: flex;
+  position: relative;
+}
+
+#bgvid {
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+  //overflow: hidden;
+  position: absolute;
+  object-position: center bottom;
+}
+
+#birds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Stellen Sie sicher, dass es den gesamten Hero-Container abdeckt */
+  pointer-events: none; /* Ermöglicht Klicks durch das Element hindurch auf darunterliegende Elemente */
+}
+
+/* Responsives Menü für kleinere Bildschirme */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stapelt die Menüpunkte vertikal */
+    padding: 10px; /* Reduziert den Platz im Menü für kleinere Bildschirme */
+  }
+
+  nav li {
+    width: 100%; /* Menüpunkte nehmen die volle Breite ein */
+    text-align: center; /* Zentriert den Text in den Menüpunkten */
+  }
+}
+
+/* Typografie */
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif; /* Beispiel für eine Schriftfamilie */
+}
+
+p,
+li,
+a,
+span {
+  font-family: "Roboto", sans-serif; /* Beispiel für eine Schriftfamilie */
+}
+
+/* Icons und Bilder */
+.icon {
+  width: 50px; /* Oder eine andere passende Größe */
+  height: auto;
+}
+
+/* Beispiel für das Stylen eines Bildes */
+img.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Beispiel für das Stylen von SVG-Icons */
+svg.icon {
+  fill: var(--primary-color);
+  width: 24px; /* Größe anpassen */
+  height: 24px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+header,
+footer,
+section {
+  //padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //min-height: calc(
+  //  100vh - 60px
+  //); /* 60px ist die angenommene Höhe des Headers */
+}
+
+#features {
+  /* Stil für die Features */
+}
+
+#products {
+  /* Stil für die Produktbereiche */
+}
+
+#testimonials {
+  background: var(--bg-color);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.testimonial {
+  flex: 0 0 auto;
+  width: 300px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative; /* Für absolutes Positionieren der Kinder-Elemente */
+  padding-top: 25px; /* Reduzieren Sie diesen Wert, um das Bild näher an den Text zu rücken */
+}
+
+.testimonial-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #f9f9f9; /* Farbe des Hintergrundes der Webseite */
+  position: absolute;
+  top: -30px; /* Die Hälfte der Höhe des Bildes, um es mittig zu positionieren */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white; /* Hintergrund des Bildes, falls es transparente Bereiche gibt */
+  z-index: 10; /* Stellt sicher, dass das Bild über anderen Elementen liegt */
+}
+
+.testimonial-content {
+  margin-top: 20px;
+}
+
+.testimonial-text {
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.testimonial-rating {
+  color: #ffc107; /* Goldfarbe für Sterne */
+  margin-top: 10px;
+}
+
+/* Scrollbar Styling */
+.testimonial-slider::-webkit-scrollbar {
+  height: 5px;
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.testimonial-slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#contact {
+  /* Stil für den Kontaktbereich */
+}
+
+footer {
+  /* Stil für den Footer */
+}
+.btn {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: darken(var(--primary-color), 10%);
+}

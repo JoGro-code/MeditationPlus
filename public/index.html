@@ -1,0 +1,118 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meditation Sets Landingpage</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="myHeader">
+      <nav>
+        <ul>
+          <li><h1>Willkommen bei <br />
+        MeditationPlus</h1></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#products">Produkte</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="headerPlaceholder" style="height: 0"></div>
+    <main>
+      <section id="hero">
+        <video id="bgvid" preload="auto">
+          <source src="/video/meditationplus_bg.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <!-- Beispiel für eine Sektion mit Inhalt -->
+      <section id="features">
+        <div class="container">
+          <h2>Warum Meditation?</h2>
+          <p>
+            Meditation kann helfen, Stress zu reduzieren, die Konzentration zu
+            verbessern und das allgemeine Wohlbefinden zu steigern.
+          </p>
+          <!-- Weitere Inhalte und Elemente -->
+        </div>
+      <section id="products">
+        <!-- Hier kommt die Produktauswahl hin -->
+      </section>
+
+      <section id="testimonials">
+        <div class="testimonial-slider">
+          <!-- Einzelnes Testimonial -->
+          <div class="testimonial">
+            <img class="testimonial-image" src="path_to_image/profile1.jpg" alt="Profilbild von Max Mustermann">
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Das Meditationsset hat mir geholfen, meine tägliche Praxis zu vertiefen. Die Qualität ist hervorragend!"</p>
+              <div class="testimonial-author">- Max Mustermann</div>
+              <div class="testimonial-rating">
+                &#9733; &#9733; &#9733; &#9733; &#9733; <!-- 5 Sterne -->
+              </div>
+            </div>
+          </div>
+          <!-- Weitere Testimonials -->
+          <div class="testimonial">
+            <img class="testimonial-image" src="path_to_image/profile1.jpg" alt="Profilbild von Max Mustermann">
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Das Meditationsset hat mir geholfen, meine tägliche Praxis zu vertiefen. Die Qualität ist hervorragend!"</p>
+              <div class="testimonial-author">- Max Mustermann</div>
+              <div class="testimonial-rating">
+                &#9733; &#9733; &#9733; &#9733; &#9733; <!-- 5 Sterne -->
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img class="testimonial-image" src="path_to_image/profile1.jpg" alt="Profilbild von Max Mustermann">
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Das Meditationsset hat mir geholfen, meine tägliche Praxis zu vertiefen. Die Qualität ist hervorragend!"</p>
+              <div class="testimonial-author">- Max Mustermann</div>
+              <div class="testimonial-rating">
+                &#9733; &#9733; &#9733; &#9733; &#9733; <!-- 5 Sterne -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <!-- Hier kommt das Kontaktformular oder Kontaktdaten hin  <div style="height: 100vh; opacity: 0;"></div>-->
+      </section>
+      <div style="height: 100vh; opacity: 0;"></div>
+    </main>
+    
+    <footer>
+      <!-- Hier kommt der Footer mit zusätzlichen Informationen hin <div id="birds"></div> -->
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/three.r134.min.js" ></script>
+    <script src="js/vanta.birds.min.js" ></script> 
+    <script>
+    VANTA.BIRDS({
+      el: "#myHeader",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundAlpha: 0,
+      birdSize: 2,
+      speedLimit: 12.00,
+      quantity: 2.00
+    })
+    </script> 
+    
+  </body>
+</html>
